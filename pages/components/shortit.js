@@ -13,11 +13,20 @@ class shortit extends Component {
 			[e.target.name]: e.target.value
 		});
 	};
-	handleCopy = () => {
+
+	handleCopy = (e) => {
+		const btntxt = document.getElementById('btnContent');
 		let copyText = document.getElementById('copy');
 		copyText.select();
 		copyText.setSelectionRange(0, 99999);
 		document.execCommand('copy');
+		e.target.focus();
+		btntxt.textContent = 'Copied!';
+		btntxt.style.background = '#6f5cb6';
+		setTimeout(function Copy() {
+			btntxt.textContent = 'Copy';
+			btntxt.style.background = '#eb6832';
+		}, 2000);
 	};
 	onSubmit = (e) => {
 		e.preventDefault();
@@ -56,12 +65,13 @@ class shortit extends Component {
 							</div>
 							<div style={{ display: 'flex' }}>
 								<input
+									readOnly
 									className="mx-8"
 									id="copy"
 									value={item.short_link}
 									style={{ border: 'none', outline: 'none' }}
 								/>
-								<button onClick={this.handleCopy} className={shortStyle.btn2}>
+								<button id="btnContent" onClick={this.handleCopy} className={shortStyle.btn2}>
 									Copy
 								</button>
 							</div>

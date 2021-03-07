@@ -47,17 +47,15 @@
 }
 .btn2 {
 	color: #fff;
-	margin-top: auto;
 	background: #eb6832;
-	padding: 18px 24px;
+	padding: 8px 24px;
 	border-radius: 10px;
 	width: 142.25px;
-	height: 63.5px;
 	margin-left: 1rem;
 	font-weight: 600;
 	font-size: 18px;
 	outline: none;
-	margin-top: -1rem;
+	margin-top: -0.5rem;
 }
 .btn:focus {
 	border-color: #eb6832;

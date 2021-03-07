@@ -12,16 +12,13 @@ export default function Navbar() {
 			<div>
 				<ul className={navStyle.ul}>
 					<li className={navStyle.li}>
-						<Link href="/about">About</Link>
+						<Link href="#">About</Link>
 					</li>
 					<li className={navStyle.li}>
-						<Link href="/services">Services</Link>
+						<Link href="/#">Services</Link>
 					</li>
 					<li className={navStyle.li}>
-						<Link href="/services">Services</Link>
-					</li>
-					<li className={navStyle.li}>
-						<Link href="/services">Services</Link>
+						<Link href="#">Offers</Link>
 					</li>
 				</ul>
 			</div>

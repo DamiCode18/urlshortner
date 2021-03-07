@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Shortner from './components/shortner';
 import Features from './components/features';
 import Shortit from './components/shortit';
+import Footer from './components/footer';
+
 export default function Home() {
 	return (
 		<div>
@@ -16,6 +18,7 @@ export default function Home() {
 				<Shortner />
 				<Shortit />
 				<Features />
+				<Footer />
 			</main>
 		</div>
 	);
