@@ -36,7 +36,8 @@ class shortit extends Component {
 			.then((res) =>
 				this.setState({
 					myData: [ ...this.state.myData, res.data.result ],
-					isLoading: false
+					isLoading: false,
+					input: ''
 				})
 			)
 			.catch((err) => console.log(err));
@@ -52,6 +53,7 @@ class shortit extends Component {
 							type="text"
 							placeholder="Shorten a link here..."
 							name="input"
+							value={input}
 							onChange={this.onChange}
 						/>
 						{isLoading ? (
