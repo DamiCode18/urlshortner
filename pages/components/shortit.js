@@ -5,7 +5,8 @@ import React, { Component } from 'react';
 class shortit extends Component {
 	state = {
 		input: '',
-		myData: []
+		myData: [],
+		isLoading: false
 	};
 
 	onChange = (e) => {
@@ -13,7 +14,11 @@ class shortit extends Component {
 			[e.target.name]: e.target.value
 		});
 	};
-
+	onLoad = (e) => {
+		this.setState({
+			isLoading: true
+		});
+	};
 	handleCopy = (e, i) => {
 		e.target.textContent = 'Copied!';
 		e.target.style.background = '#6f5cb6';
@@ -25,18 +30,19 @@ class shortit extends Component {
 	};
 	onSubmit = (e) => {
 		e.preventDefault();
+		this.state.input && this.onLoad();
 		axios
 			.post(`https://api.shrtco.de/v2/shorten?url=${this.state.input}`)
 			.then((res) =>
 				this.setState({
-					myData: [ ...this.state.myData, res.data.result ]
+					myData: [ ...this.state.myData, res.data.result ],
+					isLoading: false
 				})
 			)
 			.catch((err) => console.log(err));
 	};
 	render() {
-		const { myData, input } = this.state;
-		console.log(myData);
+		const { myData, input, isLoading } = this.state;
 		return (
 			<div>
 				<div className={shortStyle.shrt}>
@@ -48,7 +54,12 @@ class shortit extends Component {
 							name="input"
 							onChange={this.onChange}
 						/>
-						<button className={shortStyle.btn}>Shorten It!</button>
+						{isLoading ? (
+							<button className={shortStyle.btn}>Loading...</button>
+						) : (
+							<button className={shortStyle.btn}>Shorten It!</button>
+						)}
+
 						{input == '' && <div className={shortStyle.adjust}>Please add a link</div>}
 					</form>
 				</div>
