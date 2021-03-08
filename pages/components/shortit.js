@@ -69,7 +69,7 @@ class shortit extends Component {
 									className="mx-8"
 									id="copy"
 									value={item.short_link}
-									style={{ border: 'none', outline: 'none' }}
+									style={{ border: 'none', outline: 'none', maxWidth: '3rem' }}
 								/>
 								<button id="btnContent" onClick={this.handleCopy} className={shortStyle.btn2}>
 									Copy
