@@ -57,7 +57,7 @@ class shortit extends Component {
 							onChange={this.onChange}
 						/>
 						{isLoading ? (
-							<button className={shortStyle.btn}>Loading...</button>
+							<button className={shortStyle.loader} />
 						) : (
 							<button className={shortStyle.btn}>Shorten It!</button>
 						)}
