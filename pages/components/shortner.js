@@ -12,7 +12,7 @@ export default function shortner() {
 						Build your brand's recognition and get detailed insights on how your links are performing
 					</p>
 					<div className="mt-8">
-						<Link href="/login">
+						<Link href="#">
 							<a className={shortnerStyle.btn}>Get started</a>
 						</Link>
 					</div>

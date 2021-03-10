@@ -37,7 +37,7 @@ export default class Navbar extends Component {
 					{/* <a onClick={this.handleMode} className="mx-4 cursor-pointer">
 						{dark ? 'Lightmode' : 'Darkmode'}
 					</a> */}
-					<Link href="/login">
+					<Link href="#">
 						<a className={navStyle.btn}>Login</a>
 					</Link>
 				</div>

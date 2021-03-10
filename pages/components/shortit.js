@@ -6,7 +6,8 @@ class shortit extends Component {
 	state = {
 		input: '',
 		myData: [],
-		isLoading: false
+		isLoading: false,
+		errText: false
 	};
 
 	onChange = (e) => {
@@ -30,6 +31,10 @@ class shortit extends Component {
 	};
 	onSubmit = (e) => {
 		e.preventDefault();
+		this.state.input == '' &&
+			this.setState({
+				errText: true
+			});
 		this.state.input && this.onLoad();
 		axios
 			.post(`https://api.shrtco.de/v2/shorten?url=${this.state.input}`)
@@ -37,13 +42,14 @@ class shortit extends Component {
 				this.setState({
 					myData: [ ...this.state.myData, res.data.result ],
 					isLoading: false,
-					input: ''
+					input: '',
+					errText: false
 				})
 			)
 			.catch((err) => console.log(err));
 	};
 	render() {
-		const { myData, input, isLoading } = this.state;
+		const { myData, input, isLoading, errText } = this.state;
 		return (
 			<div>
 				<div className={shortStyle.shrt}>
@@ -62,7 +68,7 @@ class shortit extends Component {
 							<button className={shortStyle.btn}>Shorten It!</button>
 						)}
 
-						{input == '' && <div className={shortStyle.adjust}>Please add a link</div>}
+						{errText && input == '' && <div className={shortStyle.adjust}>Please add a link</div>}
 					</form>
 				</div>
 				{myData.length >= 1 &&
