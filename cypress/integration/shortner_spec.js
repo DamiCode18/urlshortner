@@ -1,7 +1,6 @@
-describe('Url-Shortner', () =>{
-beforeEach(()=>{
-    cy.visit('http://localhost:3000/')
-
-    cy.get('.home')
-})
-})
+describe('My First Test', () => {
+    it('Visits the Kitchen Sink', () => {
+      cy.visit('http://localhost:3000')
+      cy.contains('type[text]').click()
+    })
+  })
