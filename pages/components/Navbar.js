@@ -3,16 +3,15 @@ import { Component } from 'react';
 import navStyle from '../../styles/Nav.module.css';
 
 export default class Navbar extends Component {
-	state = {
-		dark: false
-	};
-	handleMode = () => {
-		this.setState({
-			dark: !this.state.dark
-		});
-	};
+	hambuger=()=>{
+		var x = document.getElementById("myLinks");
+		if (x.style.display === "block") {
+			x.style.display = "none";
+		} else {
+			x.style.display = "block";
+		}
+	}
 	render() {
-		const { dark } = this.state;
 		return (
 			<div className={navStyle.navBg}>
 				<div>
@@ -20,6 +19,10 @@ export default class Navbar extends Component {
 						<a className={navStyle.hm}>Urlshortner</a>
 					</Link>
 				</div>
+				<div class={navStyle.fa} onClick={this.hambuger}>
+						<i class="fa fa-bars"></i>
+					</div>
+				<span id="myLinks" class={navStyle.hide}>
 				<div>
 					<ul className={navStyle.ul}>
 						<li className={navStyle.li}>
@@ -31,16 +34,15 @@ export default class Navbar extends Component {
 						<li className={navStyle.li}>
 							<Link href="#">Offers</Link>
 						</li>
-					</ul>
+					</ul>					
 				</div>
 				<div>
-					{/* <a onClick={this.handleMode} className="mx-4 cursor-pointer">
-						{dark ? 'Lightmode' : 'Darkmode'}
-					</a> */}
 					<Link href="#">
 						<a className={navStyle.btn}>Login</a>
 					</Link>
 				</div>
+				</span>
+			
 			</div>
 		);
 	}

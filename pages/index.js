@@ -12,6 +12,7 @@ export default function Home() {
 				<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
 				<title>Url-Shortner</title>
 				<link rel="icon" href="/favicon.ico" />
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 			</Head>
 
 			<main>
