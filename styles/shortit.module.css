@@ -91,3 +91,21 @@
 		transform: rotate(360deg);
 	}
 }
+@media only screen and (max-width: 767px) {
+	.input {
+		max-width: 150px;
+	}
+	.shrt{
+		padding: 3rem 0.5rem;
+	}
+}
+@media only screen and (min-width: 769px) and (max-width: 899px) {
+	.input {
+		max-width: 400px;
+	}
+}
+@media only screen and (min-width: 900px) and (max-width: 1121px) {
+	.input {
+		max-width: 600px;
+	}
+}

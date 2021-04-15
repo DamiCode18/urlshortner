@@ -7,7 +7,7 @@ export default function features() {
 			<h3 className={featuresStyle.head}>Features</h3>
 			<div>
 				<h1 className={featuresStyle.subhead}>What we offer</h1>
-				<div className="flex justify-between" style={{ paddingLeft: '12rem', paddingRight: '12rem' }}>
+				<div className={featuresStyle.flex}>
 					<div>
 						<div className="flex justify ml-8 my-6">
 							<Image src="/Teaching 1.svg" alt="img" width={80} height={80} />

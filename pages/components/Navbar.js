@@ -3,14 +3,14 @@ import { Component } from 'react';
 import navStyle from '../../styles/Nav.module.css';
 
 export default class Navbar extends Component {
-	hambuger=()=>{
-		var x = document.getElementById("myLinks");
-		if (x.style.display === "block") {
-			x.style.display = "none";
-		} else {
-			x.style.display = "block";
-		}
-	}
+	// hambuger=()=>{
+	// 	var x = document.getElementById("myLinks");
+	// 	if (x.style.display === "block") {
+	// 		x.style.display = "none";
+	// 	} else {
+	// 		x.style.display = "block";
+	// 	}
+	// }
 	render() {
 		return (
 			<div className={navStyle.navBg}>
@@ -19,8 +19,8 @@ export default class Navbar extends Component {
 						<a className={navStyle.hm}>Urlshortner</a>
 					</Link>
 				</div>
-				<div class={navStyle.fa} onClick={this.hambuger}>
-						<i class="fa fa-bars"></i>
+				<div className={navStyle.fa}>
+						<i class="fa fa-bars text-2xl"></i>
 					</div>
 				<span id="myLinks" class={navStyle.hide}>
 				<div>

@@ -2,26 +2,26 @@ import footerStyle from '../../styles/footer.module.css';
 
 const footer = () => {
 	return (
-		<div className="flex justify-around p-8 bg-black text-white mt-7 mx-30">
-			<div className="p-8 m-8">
+		<div className={footerStyle.flex}>
+			<div className="py-8 my-8">
 				<a href="#" className="lg:text-3xl md:text-2xl sm:text-sm font-Montserrat font-bold cursor-pointer">
 					UrlShortner
 				</a>
 			</div>
-			<div className="flex p-8 m-8">
-				<div className="mx-8 px-8">
+			<div className={footerStyle.flex2}>
+				<div className={footerStyle.rsz}>
 					<h4 className="font-Montserrat lg:text-lg font-bold mb-3">Features</h4>
 					<p className="font-Montserrat  hover:text-green-700 cursor-pointer">Link Shortening</p>
 					<p className="font-Montserrat  hover:text-green-700 cursor-pointer">Analytics</p>
 					<p className="font-Montserrat  hover:text-green-700 cursor-pointer">Branded Links</p>
 				</div>
-				<div className="mx-8 px-8">
+				<div className={footerStyle.rsz}>
 					<h4 className="font-Montserrat lg:text-lg font-bold mb-3">Resources</h4>
 					<p className="font-Montserrat  hover:text-green-700 cursor-pointer">Blog</p>
 					<p className="font-Montserrat  hover:text-green-700 cursor-pointer">Developers</p>
 					<p className="font-Montserrat  hover:text-green-700 cursor-pointer">Support</p>
 				</div>
-				<div className="mx-8 px-8">
+				<div className={footerStyle.rsz}>
 					<h4 className="font-Montserrat lg:text-lg font-bold mb-3">Company</h4>
 					<p className="font-Montserrat  hover:text-green-700 cursor-pointer">About</p>
 					<p className="font-Montserrat  hover:text-green-700 cursor-pointer">Our Team</p>
@@ -29,7 +29,7 @@ const footer = () => {
 					<p className="font-Montserrat  hover:text-green-700 cursor-pointer">Contact</p>
 				</div>
 			</div>
-			<div className="p-8 m-8 flex">
+			<div className={footerStyle.flex2}>
 				<a className="mx-1 px-1">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
 						<path

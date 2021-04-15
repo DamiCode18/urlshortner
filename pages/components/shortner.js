@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function shortner() {
 	return (
 		<div className={shortnerStyle.home}>
-			<div className="flex justify-between">
+			<div className={shortnerStyle.flex}>
 				<div className={shortnerStyle.pad}>
 					<h1 className={shortnerStyle.title}>Shorten that long url, the pain in your ass!!!</h1>
 					<p className={shortnerStyle.desc}>
@@ -18,7 +18,7 @@ export default function shortner() {
 					</div>
 				</div>
 				<div className="py-8">
-					<Image src="/Rectangle 1.svg" alt="Picture of the author" width={550} height={550} />
+					<img src="/Rectangle 1.svg" alt="Picture of the author" className={shortnerStyle.img} />
 				</div>
 			</div>
 		</div>
