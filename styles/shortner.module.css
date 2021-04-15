@@ -48,17 +48,17 @@
 }
 @media only screen and (max-width: 768px) {
 	.title {
-		max-width: 650px;
+		max-width: 350px;
 		max-height: 146px;
 		font-family: Montserrat;
 		font-style: normal;
 		font-weight: bolder;
-		font-size: 20px;
+		font-size: large;
 		line-height: 132.9%;
 		color: #ffffff;
 	}
 	.pad {
-		padding-top: 90px;
+		padding-top: 45px;
 		padding-left: 35px;
 	}
 	.flex {
@@ -68,6 +68,10 @@
 		height: 300px;
 		width: 300px;
 		margin: auto;
+	}
+	.desc{
+		width: 19rem;
+		font-size: medium;
 	}
 }
 @media only screen and (min-width: 769px) and (max-width: 1300px) {
