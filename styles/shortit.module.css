@@ -109,3 +109,9 @@
 		max-width: 600px;
 	}
 }
+@media only screen and (max-width: 766px){
+	.data{
+		display: block;
+		height: 10rem;
+	}
+}
