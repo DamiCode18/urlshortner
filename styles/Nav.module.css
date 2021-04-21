@@ -64,19 +64,41 @@
 }
 .fa {
 	display: none;
+	/* position: relative; */
 }
-.hide {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}
+
+
 @media only screen and (max-width: 768px) {
 	.fa {
 		display: block;
 		cursor: pointer;
-		
+		position: relative;
 	}
 	.hide {
+		display: none;
+	}
+	.ul {
+		display: block;
+	}
+	.hbg{
+		background: #fff;
+		padding: 3rem;
+		position: absolute;
+		width: 25rem;
+		left: 0px;
+	}
+	.li{
+		margin: 20px;
+	}
+}
+
+@media only screen and (min-width: 769px){
+	.hide {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.hbg{
 		display: none;
 	}
 }
